@@ -8,8 +8,6 @@ const nextConfig = {
     loader: "akamai",
     path: ""
   },
-  assetPrefix: ghPages,
-  basePath: ghPages
 }
 
 module.exports = nextConfig
