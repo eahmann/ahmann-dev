@@ -1,18 +1,10 @@
 /** @type {import('next').NextConfig} */
-// const ghPages = process.env.DEPLOY_TARGET === 'gh-pages';
-
-// console.log(ghPages)
+const isProd = process.env.NODE_ENV === 'production';
 
 let nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
-
-if (nextConfig.basePath) {
-  nextConfig = {
-    assetPrefix: '/ahmann-dev',
-    ...nextConfig
-  }
+  assetPrefix: isProd ? '/ahmann-dev' : '' 
 }
 
 module.exports = nextConfig
