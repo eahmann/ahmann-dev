@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 
-let nextConfig = {
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   assetPrefix: isProd ? '/ahmann-dev' : '' 
