@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
-const isPages = process.env.DEPLOY_TARGET === 'gh-pages';
-
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: isPages ? '/ahmann-dev' : '' 
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
 }
 
 module.exports = nextConfig
