@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
+const isPages = process.env.DEPLOY_TARGET === 'gh-pages';
 
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: isProd ? '/ahmann-dev' : '' 
+  assetPrefix: isPages ? '/ahmann-dev' : '' 
 }
 
 module.exports = nextConfig
