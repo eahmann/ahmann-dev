@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const ghPages = process.env.GH_PAGES ? "/ahmann-dev" : undefined
+const ghPages = process.env.NEXT_PUBLIC_GH_PAGES ? "/ahmann-dev" : undefined
 
 const nextConfig = {
   reactStrictMode: true,
