@@ -29,6 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_FAVICON: "/ahmann-dev"
+      GH_PAGES: true
     steps:
       - name: Checkout
         uses: actions/checkout@v3
